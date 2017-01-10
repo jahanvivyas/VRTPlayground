@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UILabel
+public extension UILabel
 {
-    func addImage(imageName: String) {
+    public func addImage(imageName: String) {
         self.textAlignment = NSTextAlignment.left
         
         let attachment:NSTextAttachment = NSTextAttachment()
@@ -22,7 +22,7 @@ extension UILabel
         self.attributedText = attributedString
     }
     
-    func addUnderline(lineColor: UIColor, isMultiline: Bool) {
+    public func addUnderline(lineColor: UIColor, isMultiline: Bool) {
         //Set lineBreakMode
         if(isMultiline) {
             self.numberOfLines = 0

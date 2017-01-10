@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UISegmentedControl {
+public extension UISegmentedControl {
     
-    func styleBorders(color: UIColor) {
+    public func styleBorders(color: UIColor) {
         setBackgroundImage(imageWithColor(color: UIColor.clear), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         setBackgroundImage(imageWithColor(color: color), for: UIControlState.selected, barMetrics: UIBarMetrics.default)
         applyRoundedCorners(color: color)

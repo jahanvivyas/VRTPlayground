@@ -5,9 +5,9 @@ extension Int {
     var radiansToDegrees: Double { return Double(self) * 180 / .pi }
 }
 
-class CircularProgressView: UIView {
+public class CircularProgressView: UIView {
 
-    let strokeColor:UIColor = UIColor(hexString: "#5dfc71")
+    let strokeColor = UIColor(hexString: "#5dfc71")
 
     public var percentage:Int = 0{
         didSet {
@@ -24,11 +24,11 @@ class CircularProgressView: UIView {
         self.addSubview(imageView)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         let halfSize:CGFloat = min( bounds.size.width/2, bounds.size.height/2)
         let centerPoint:CGPoint = CGPoint(x: halfSize, y: halfSize)
         let radius = halfSize

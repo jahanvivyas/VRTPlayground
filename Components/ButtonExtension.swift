@@ -8,25 +8,25 @@
 
 import UIKit
 
-extension UIButton
+public extension UIButton
 {
-    func addBorder(borderColor: UIColor) {
+    public func addBorder(borderColor: UIColor) {
         self.layer.borderColor = borderColor.cgColor
         self.layer.borderWidth = 1.0
     }
-    func addImage(image: UIImage) {
+    public func addImage(image: UIImage) {
         self.setImage(image, for: UIControlState.normal)
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: -15, bottom: 0, right: 0)
     }
     
-    func setImageAndBorder(image: UIImage, borderColor: UIColor) {
+    public func setImageAndBorder(image: UIImage, borderColor: UIColor) {
         self.layer.borderColor = borderColor.cgColor
         self.layer.borderWidth = 1.0
         self.setImage(image, for: UIControlState.normal)
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: -15, bottom: 0, right: 0)
     }
     
-    func addUnderLine(lineColor: UIColor, textColor: UIColor, isMultiline: Bool) {
+    public func addUnderLine(lineColor: UIColor, textColor: UIColor, isMultiline: Bool) {
         //Set lineBreakMode
         if(isMultiline)
         {

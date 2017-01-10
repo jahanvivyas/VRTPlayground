@@ -8,16 +8,16 @@
 
 import UIKit
 
-class LinkButton: UIButton {
+public class LinkButton: UIButton {
     
     var lineColor:UIColor
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         lineColor = UIColor.green
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -35,7 +35,7 @@ class LinkButton: UIButton {
         self.lineColor = lineColor
     }
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         
         let linePath = UIBezierPath()
         linePath.move(to: CGPoint(x: 0, y: self.frame.size.height))
